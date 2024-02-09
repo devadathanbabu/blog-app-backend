@@ -8,6 +8,7 @@ const userModel=require("../models/usermodel")
     return bcrypt.hash(pass,salt)
 
  }
+// signup
 
  router.post("/signup",async(req,res)=>{
  
@@ -34,6 +35,8 @@ const userModel=require("../models/usermodel")
                  })
     
  })
+
+//sigin
 
  router.post("/signin",async(req,res)=>{
     let input=req.body
