@@ -66,9 +66,14 @@ const userModel=require("../models/usermodel")
     }
 
     res.json({
-        status:"success"
+        status:"success","userdata":data
     })
 
+ })
+
+ router.get("/viewall",async(req,res)=>{
+    let result=await userModel.find()
+    res.json(result)
  })
 
  module.exports=router
