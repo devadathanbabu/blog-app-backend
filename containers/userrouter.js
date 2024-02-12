@@ -5,7 +5,7 @@ const userModel=require("../models/usermodel")
 
  hashPasswordGenerator=async(pass)=>{
     const salt=await bcrypt.genSalt(10)
-    return bcrypt.hash(pass,salt)
+    return bcrypt.hash(pass,salt)   
 
  }
 // signup
